@@ -63,7 +63,7 @@ class BackPropNeuralNetwork:
         result, _, _ = self.__forward(x)
         return result
 
-    def train(self, trainX, trainY, stepCount=1500, lr=0.1, alpha=1e-6, acceptableError=0.005):
+    def train(self, trainX, trainY, stepCount=1500, acceptableError=0.005):
         self.__init_weights()
         error_history = []
         for i in range(stepCount):
@@ -75,6 +75,7 @@ class BackPropNeuralNetwork:
                 break
             delta_output, delta_hidden, delta_bias = self.__reverse(trainX, trainY, output, hide_layer_output,
                                                                     derivative, alpha)
+            # lr = 0.1
             # self.hidden_layer_weights -= lr*delta_hidden
             # self.output_layer_weights -= lr*delta_output
             # self.bias -= lr*delta_bias
