@@ -10,3 +10,5 @@
     - используемую функцию активации. 
 3. Обучите сеть на тренировочных данных с помощью метода train.
 4. Используйте обученую сеть с помощью метода handleInput
+
+[Пример использования сети (Google colab)](https://colab.research.google.com/drive/1HrE4w3wYRS04_MO_Pc6ZE_lgZIljecTw?authuser=1#scrollTo=flMJrQJwLJb-)
